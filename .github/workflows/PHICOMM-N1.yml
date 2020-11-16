@@ -182,7 +182,8 @@ jobs:
       with:
         name: ${{ env.DATE }}
         allowUpdates: true
-        tag: ${{ env.tag_name }}
+        #tag_name: ${{ steps.tag.outputs.release_tag }}
+        tag_name: ${{ env.tag_name }}
         commit: main
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
