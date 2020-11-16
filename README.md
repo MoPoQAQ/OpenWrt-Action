@@ -22,6 +22,8 @@ Build OpenWrt using GitHub Actions
 - It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
 - Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
 
+## Update log
+
 ## Acknowledgments
 
 - [Microsoft Azure](https://azure.microsoft.com)
@@ -37,10 +39,6 @@ Build OpenWrt using GitHub Actions
 - [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
 - [c-hive/gha-remove-artifacts](https://github.com/c-hive/gha-remove-artifacts)
 - [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-
-## Update log
-
-
 
 ## License
 
