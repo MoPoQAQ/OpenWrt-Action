@@ -8,10 +8,17 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: Build N1 OpenWrt
 
 on:
   repository_dispatch:
+  release:
+    types: published
+  push:
+    branches:
+      - main
+    paths:
+      - 'config/PHICOMM-N1.config'
   workflow_dispatch:
     inputs:
       ssh:
@@ -26,8 +33,8 @@ env:
   REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: PHICOMM-N1.config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2.sh
+  DIY_P1_SH: DIY-sh/diy-part1.sh
+  DIY_P2_SH: DIY-sh/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: false
   UPLOAD_COWTRANSFER: false
@@ -38,7 +45,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
-
+    if: github.event.repository.owner.id == github.event.sender.id
+    
     steps:
     - name: Checkout
       uses: actions/checkout@main
