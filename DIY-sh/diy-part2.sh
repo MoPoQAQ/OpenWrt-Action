@@ -45,6 +45,4 @@ git clone --depth=1 https://github.com/bao3/openwrt-udp2raw
 git clone --depth=1 https://github.com/bao3/openwrt-udpspeeder
 git clone --depth=1 https://github.com/bao3/luci-udptools
 
-# Add OpenAppFilter
-git clone --depth=1 https://github.com/destan19/OpenAppFilter
 popd
